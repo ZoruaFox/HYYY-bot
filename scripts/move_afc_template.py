@@ -45,8 +45,9 @@ def check_and_update_drafts(site, categories):
         pages_processed = False
         
         for page in pages:
-            print(f"页面: {page.name}"
+            print(f"页面: {page.name}")
         
+        # 添加一至两秒的间隔
         time.sleep(1.5)
         
         # 正则表达式匹配{{AFC submission}}模板
@@ -88,7 +89,7 @@ def check_and_update_drafts(site, categories):
                     print("将最后一个{{AFC submission}}模板放在页面最顶端")
                     
                     # 更新页面内容
-                    page.save(new_text, summary='移动AFC模板至顶部')
+                    page.save(new_text, summary='重构AFC模板位置')
                     print(f'已更新页面 {page.name} 的AFC模板位置')
                     
                     # 设置标志位为True
