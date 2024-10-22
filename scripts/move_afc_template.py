@@ -88,7 +88,7 @@ def check_and_update_drafts(site, categories):
                     print("将最后一个{{AFC submission}}模板放在页面最顶端")
                     
                     # 更新页面内容
-                    page.save(new_text, summary='重构AFC模板位置')
+                    page.save(new_text, summary='移动AFC模板至顶部')
                     print(f'已更新页面 {page.name} 的AFC模板位置')
                     
                     # 设置标志位为True
